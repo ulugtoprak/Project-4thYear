@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:padding="16dp"
+    tools:context="com.project.app.quickquery.activities.ProfileActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/form_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/username_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textColor="#333"
+                    android:layout_centerInParent="true"/>
+
+                <Button
+                    android:id="@+id/edit_username_button"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:text="@string/edit"
+                    android:textSize="12sp"
+                    android:background="#263238"
+                    android:textAllCaps="false"
+                    android:layout_alignParentRight="true"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:padding="2dp"
+                android:src="@drawable/avatar"
+                android:background="@drawable/selector_circle_background"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:id="@+id/add_edit_button1"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:text="@string/edit"
+                    android:textSize="12sp"
+                    android:background="#263238"
+                    android:layout_marginTop="10dp"
+                    android:textAllCaps="false"
+                    android:layout_alignParentRight="true"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/location_textview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/location"
+                    android:textColor="#000"
+                    android:textSize="12sp"
+                    android:layout_toLeftOf="@id/add_edit_button1"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center|left"
+                    android:drawableLeft="@drawable/ic_ios_location"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/add_edit_button2"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:text="Edit"
+                    android:textSize="12sp"
+                    android:background="#263238"
+                    android:layout_marginTop="10dp"
+                    android:textAllCaps="false"
+                    android:layout_alignParentRight="true"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/location_textview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/location"
+                    android:textColor="#000"
+                    android:textSize="12sp"
+                    android:layout_toLeftOf="@id/add_edit_button2"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center|left"
+                    android:drawableLeft="@drawable/ic_ios_location"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/add_edit_button3"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:text="@string/edit"
+                    android:textSize="12sp"
+                    android:background="#263238"
+                    android:layout_marginTop="10dp"
+                    android:textAllCaps="false"
+                    android:layout_alignParentRight="true"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/location_textview3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/location"
+                    android:textColor="#000"
+                    android:textSize="12sp"
+                    android:layout_toLeftOf="@id/add_edit_button3"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center|left"
+                    android:drawableLeft="@drawable/ic_ios_location"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/mainGender"
+                    android:textColor="#333"
+                    android:textSize="15sp" />
+
+                <Spinner
+                    android:id="@+id/genderspinner"
+                    android:layout_width="188dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="63dp"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date_of_birth"
+                    android:textColor="#333"
+                    android:textSize="15sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/Birthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:background="@drawable/selector_xml_listview_back" />
+
+                <ImageView
+                    android:id="@+id/calendar_imageview"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_android_calendar"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone_number"
+                    android:textColor="#333"
+                    android:textSize="15sp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/txt_profile_phone_number"
+                    android:singleLine="true"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:padding="5dp"
+                    android:textSize="15sp" />
+
+
+
+                <Button
+                    android:id="@+id/btnMobileedit"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:text="@string/edit"
+                    android:textSize="12sp"
+                    android:background="#263238"
+                    android:textAllCaps="false"
+                    android:layout_alignParentRight="true"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_centerVertical="true"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <Button
+                    android:id="@+id/btn_save_profile"
+                    android:text="@string/save_profile"
+                    android:layout_weight="1"
+                    android:background="#263238"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:textAllCaps="false"/>
+
+                <Button
+                    android:id="@+id/btn_sign_out"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/sign_out"
+                    android:background="#263238"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

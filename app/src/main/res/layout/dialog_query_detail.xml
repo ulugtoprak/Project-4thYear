@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/selector_dialog_background"
+    android:padding="16dp"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/username_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/username_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:layout_gravity="center"/>
+
+            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                android:id="@+id/ratings"
+                android:layout_width="60dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="5dp"
+                android:isIndicator="true"
+                android:rating="3"
+                android:layout_gravity="center"
+                app:mrb_fillBackgroundStars="false"
+                app:mrb_progressBackgroundTint="#f1c413"
+                app:mrb_progressTint="#f1c413"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/upvote_count_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_toLeftOf="@id/username_layout"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/ic_thumbsup"/>
+
+        <TextView
+            android:id="@+id/title_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#333"
+            android:layout_toLeftOf="@id/upvote_count_textview"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/query_content_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#333"
+        android:layout_marginTop="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@drawable/selector_xml_listview_back">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_name"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:textStyle="italic|bold"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Answer Title"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:textStyle="italic|bold"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/username"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/answer_listview"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scrollbars="none"
+        android:background="@drawable/selector_xml_listview_back"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/upvote_button"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:background="@drawable/selector_xml_dialog_btn"
+            android:padding="5dp"
+            android:text="@string/upvote"
+            android:textSize="12sp"
+            android:textColor="#fff"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/add_edit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:background="@drawable/selector_xml_dialog_btn"
+            android:padding="5dp"
+            android:text="@string/add_edit_answer"
+            android:textSize="12sp"
+            android:textColor="#fff"
+            android:textAllCaps="false"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_xml_dialog_btn"
+            android:padding="5dp"
+            android:text="@string/returns"
+            android:textSize="12sp"
+            android:textColor="#fff"
+            android:textAllCaps="false"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
